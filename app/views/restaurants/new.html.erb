@@ -1,3 +1,4 @@
+<h1>Add Restaurant</h1>
 <%= simple_form_for(@restaurant) do |f| %>
   <% if @restaurant.errors.any? %>
     <div class="errors-container">
@@ -12,5 +13,7 @@
   <%= f.input :address %>
   <%= f.input :category %>
   <%= f.input :phone_number %>
-  <%= f.submit %>
+  <%= f.submit "Add Restaurant", class: "btn btn-primary" %>
+  <%= link_to "Back to List", restaurants_path, class: "btn btn-danger" %>
 <% end %>
+
